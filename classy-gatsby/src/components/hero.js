@@ -25,7 +25,7 @@ const Hero = () => {
       <div className='relative pt-[56.25%]'>
         {herovideo ? (
           <iframe
-            src={`https://player.vimeo.com/video/${herovideo.vimeoId}?loop=1&autoplay=1&controls=0&mute=1`}
+            src={`https://player.vimeo.com/video/${herovideo.vimeoId}?loop=1&autoplay=1&controls=0&muted=1`}
             style={{
               position: 'absolute',
               top: 0,
@@ -34,7 +34,7 @@ const Hero = () => {
               height: '100%',
             }}
             frameBorder='0'
-            allow='autoplay; fullscreen'
+            allow='autoplay'
             allowFullScreen
           />
         ) : (
