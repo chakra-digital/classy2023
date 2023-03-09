@@ -1,0 +1,36 @@
+{
+  "root": true,
+  "api": {
+    "projectId": "8cp7h1aj",
+    "dataset": "production"
+  },
+  "project": {
+    "name": "classy-jackass"
+  },
+  "plugins": [
+    "@sanity/base",
+    "@sanity/default-layout",
+    "@sanity/default-login",
+    "@sanity/desk-tool",
+    "mux-input",
+    "@sanity/dashboard",
+    "dashboard-widget-gatsby"
+  ],
+  "env": {
+    "development": {
+      "plugins": [
+        "@sanity/vision"
+      ]
+    }
+  },
+  "parts": [
+    {
+      "name": "part:@sanity/base/schema",
+      "path": "./schemas/schema"
+    },
+    {
+      "implements": "part:@sanity/dashboard/config",
+      "path": "src/dashboardConfig.js"
+    }
+  ]
+}
